@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-var-requires */
 
 /**
  * this is a modified copy of [vscode-extension-vscode/bin/test](https://github.com/microsoft/vscode-extension-vscode/blob/main/bin/test)
@@ -8,7 +9,7 @@ const path = require('path');
 const cp = require('child_process');
 const fs = require('fs');
 
-const downloadAndUnzipVSCode = require('vscode-test').downloadAndUnzipVSCode;
+const downloadAndUnzipVSCode = require('@vscode/test-electron').downloadAndUnzipVSCode;
 
 var testsFolder;
 if (process.env.CODE_TESTS_PATH) {
